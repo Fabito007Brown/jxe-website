@@ -1,0 +1,97 @@
+.about-container {
+  margin: 2.5rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.intro {
+  margin: 3rem 6rem;
+  text-align: start;
+}
+
+.intro p {
+  margin-top: 1rem;
+  text-align: start;
+}
+
+.about-container h2 {
+  text-align: start;
+}
+
+.about-container h1 {
+  grid-column: 1 / span 2;
+  text-align: start;
+}
+
+.about-container p {
+  text-align: start;
+  margin-top: 2rem;
+}
+
+.about-container > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin-bottom: 10px; /* Add margin between each fundador section */
+}
+
+.about-container > div > h2 {
+  margin: 0;
+}
+
+.about-container > div > p {
+  margin: 0;
+}
+
+.about-container > div > img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.about-container img {
+  height: 320px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .about-container {
+    margin: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+
+  .fabio-img {
+    padding-bottom: 2rem;
+  }
+
+  .chema-img {
+    padding-bottom: 2rem;
+  }
+
+  .monti-img {
+    padding-bottom: 2rem;
+  }
+
+  .tito-img {
+    padding-bottom: 2rem;
+  }
+
+  .intro {
+    margin: 2.5rem 2rem;
+  }
+
+  .about-container > div {
+    width: 100%;
+  }
+
+  .about-container img {
+    width: 100%;
+  }
+
+  .about-container p {
+    text-align: start;
+  }
+}

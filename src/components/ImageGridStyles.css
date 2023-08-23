@@ -1,0 +1,114 @@
+/* Styles for the image grid */
+.pics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pics-grid img {
+  width: calc(33.33% - 10px);
+  max-width: 300px; /* Make the images smaller */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Add cursor pointer for clickable images */
+}
+
+.pics-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Styles for the lightbox */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 3rem;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+
+  padding: 0; /* Remove padding to make it closer to the screen edges */
+  margin: 0; /* Remove margin to make it closer to the screen edges */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001; /* Ensure the modal appears above the overlay */
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  height: 400px;
+  min-width: 380px;
+  object-fit: contain; /* Maintain aspect ratio and fit the image */
+}
+
+.close-button {
+  margin-top: 7rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.container {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.container h3 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.container p {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .pics-grid img {
+    width: calc(33.33% - 10px);
+    max-width: 160px; /* Make the images smaller */
+  }
+
+  .modal-image {
+    min-width: 260px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin-bottom: 1rem;
+  }
+  .pics-grid img {
+    width: calc(50% - 10px);
+    max-width: 260px; /* Make the images smaller */
+  }
+
+  .modal-image {
+    min-width: 260px;
+  }
+}

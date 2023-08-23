@@ -1,0 +1,26 @@
+.history-container {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+
+  text-align: start;
+}
+
+.history-container h1 {
+  padding-bottom: 1rem;
+}
+
+.history-container p {
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .history-container {
+    margin: 2.5rem 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+}
